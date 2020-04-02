@@ -35,9 +35,8 @@ class Game {
     */
     startGame() {
         overlay.style.display = "none";
-        const randomPhrase = this.getRandomPhrase();
-        randomPhrase.addPhraseToDisplay();
-        this.activePhrase=randomPhrase;
+        this.activePhrase=this.getRandomPhrase();
+        this.activePhrase.addPhraseToDisplay();
     }
 
     /**
@@ -153,10 +152,10 @@ class Game {
         } else {
             button.className = "chosen";
             this.activePhrase.showMatchedLetter(button.textContent); 
-        }
-        //if the player has won the game, call the gameOver() method.
-        if(this.checkForWin()===true){
-            this.gameOver(true);
+            //if after this guess, the player has won the game, call the gameOver method.
+            if(this.checkForWin()===true){
+                this.gameOver(true);
+            }
         }
     }
 }

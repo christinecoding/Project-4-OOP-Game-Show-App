@@ -173,57 +173,57 @@ skipPhrase.addEventListener("click", () =>{
 
 //Event listener for keyboard presses. Pressing a physical keyboard key will generate the same actions as clicking on a key on the onscreen keyboard 
 document.addEventListener("keydown", event => {
-    if(event.key==="a"){
+    if(event.key==="a" && keyA.disabled===false){
         game.handleInteraction(keyA);
-    } else if(event.key==="b") {
+    } else if(event.key==="b" && keyB.disabled===false) {
         game.handleInteraction(keyB);
-    } else if(event.key==="c") {
+    } else if(event.key==="c" && keyC.disabled===false) {
         game.handleInteraction(keyC);
-    } else if(event.key==="d") {
+    } else if(event.key==="d" && keyD.disabled===false) {
         game.handleInteraction(keyD);
-    } else if(event.key==="e") {
+    } else if(event.key==="e" && keyE.disabled===false) {
         game.handleInteraction(keyE);
-    } else if(event.key==="f") {
+    } else if(event.key==="f" && keyF.disabled===false) {
         game.handleInteraction(keyF);
-    } else if(event.key==="g") {
+    } else if(event.key==="g" && keyG.disabled===false) {
         game.handleInteraction(keyG);
-    } else if(event.key==="h") {
+    } else if(event.key==="h"&& keyH.disabled===false) {
         game.handleInteraction(keyH);
-    } else if(event.key==="i") {
+    } else if(event.key==="i" && keyI.disabled===false) {
         game.handleInteraction(keyI);
-    } else if(event.key==="j") {
+    } else if(event.key==="j" && keyJ.disabled===false) {
         game.handleInteraction(keyJ);
-    } else if(event.key==="k") {
+    } else if(event.key==="k" && keyK.disabled===false) {
         game.handleInteraction(keyK);
-    } else if(event.key==="l") {
+    } else if(event.key==="l" && keyL.disabled===false) {
         game.handleInteraction(keyL);
-    } else if(event.key==="m") {
+    } else if(event.key==="m" && keyM.disabled===false) {
         game.handleInteraction(keyM);
-    } else if(event.key==="n") {
+    } else if(event.key==="n" && keyN.disabled===false) {
         game.handleInteraction(keyN);
-    } else if(event.key==="o") {
+    } else if(event.key==="o" && keyO.disabled===false) {
         game.handleInteraction(keyO);
-    } else if(event.key==="p") {
+    } else if(event.key==="p" && keyP.disabled===false) {
         game.handleInteraction(keyP);
-    } else if(event.key==="q") {
+    } else if(event.key==="q" && keyQ.disabled===false) {
         game.handleInteraction(keyQ);
-    } else if(event.key==="r") {
+    } else if(event.key==="r" && keyR.disabled===false) {
         game.handleInteraction(keyR);
-    } else if(event.key==="s") {
+    } else if(event.key==="s" && keyS.disabled===false) {
         game.handleInteraction(keyS);
-    } else if(event.key==="t") {
+    } else if(event.key==="t" && keyT.disabled===false) {
         game.handleInteraction(keyT);
-    } else if(event.key==="u") {
+    } else if(event.key==="u" && keyU.disabled===false) {
         game.handleInteraction(keyU);
-    } else if(event.key==="v") {
+    } else if(event.key==="v" && keyV.disabled===false) {
         game.handleInteraction(keyV);
-    } else if(event.key==="w") {
+    } else if(event.key==="w" && keyW.disabled===false) {
         game.handleInteraction(keyW);
-    } else if(event.key==="x") {
+    } else if(event.key==="x" && keyX.disabled===false) {
         game.handleInteraction(keyX);
-    } else if(event.key==="y") {
+    } else if(event.key==="y" && keyY.disabled===false) {
         game.handleInteraction(keyY);
-    } else if(event.key==="z") {
+    } else if(event.key==="z" && keyZ.disabled===false) {
         game.handleInteraction(keyZ);
     } else if(event.which===13 && overlay.style.display===''){ 
        startResetGame(); //when "Start Game" button is visible on the overlay, can start the game by pressing the enter key 
