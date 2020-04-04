@@ -84,9 +84,9 @@ class Game {
 
         //function to test if a heart is currently live or lost
         const liveHeartTest=(heart)=>{ 
-            if(heart.getAttribute("src")=== "images/liveHeart.png"){
+            if (heart.getAttribute("src")=== "images/liveHeart.png"){
                 return true;
-            }else{
+            } else {
                 return false;
             }
         };
@@ -96,27 +96,27 @@ class Game {
             heart.src='images/lostHeart.png';
         };
 
-        if(liveHeartTest(heart1)===true){
+        if (liveHeartTest(heart1)===true){
             changeHeartImage(heart1);
-        }else if(liveHeartTest(heart2)===true){
+        } else if (liveHeartTest(heart2)===true){
             changeHeartImage(heart2);
-        }else if(liveHeartTest(heart3)===true){
+        } else if (liveHeartTest(heart3)===true){
             changeHeartImage(heart3);
-        }else if(liveHeartTest(heart4)===true){
+        } else if (liveHeartTest(heart4)===true){
             changeHeartImage(heart4);
-        }else{
+        } else {
             changeHeartImage(heart5);
         };
 
         this.missed+=1;
 
         //disable hint button if only one live heart left
-        if(this.missed===4){
+        if (this.missed===4){
             hintButton.disabled=true; 
             hintButton.classList="hint-disabled";
         }
         //if the number of missed guesses is equal to 5 then the user lost the game
-        if(this.missed===5){
+        if (this.missed===5){
             this.gameOver(false);
         }
     }
@@ -127,7 +127,7 @@ class Game {
      */
     gameOver(gameWon) {
         const overlayH1 = document.getElementById('game-over-message');
-        if(gameWon===false){
+        if (gameWon===false){
             overlayH1.textContent="Sorry, the game has ended for you because you ran out of hearts";
             overlay.className="lose";
             overlay.style.display = '';
@@ -146,14 +146,14 @@ class Game {
     handleInteraction(button){
         //disable button once clicked
         button.disabled=true; 
-        if(this.activePhrase.checkLetter(button.textContent)===false){
+        if (this.activePhrase.checkLetter(button.textContent)===false){
             button.className = "wrong";
             this.removeLife();
         } else {
             button.className = "chosen";
             this.activePhrase.showMatchedLetter(button.textContent); 
             //if after this guess, the player has won the game, call the gameOver method.
-            if(this.checkForWin()===true){
+            if (this.checkForWin()===true){
                 this.gameOver(true);
             }
         }
